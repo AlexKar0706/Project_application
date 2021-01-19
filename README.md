@@ -1,2 +1,2 @@
-# Project_application
+# Project application
 Ready application for the project
