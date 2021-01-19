@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="Styles/login-registration.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+  <title>Phone Hunter | Login</title>
+  </head>
+  <body>
+    <div id="content">
+      <div class="registration">
+        <h1>Login</h1>
+      </div>
+      <p style="color: red;">
+      <% if(messages.error) { %>
+      <%=messages.error%>
+      <%}%>
+      <% if(success_msg.length > 0) { %>
+      <%=success_msg%>
+      <%}%>
+      </p>
+    <form action="/login" method="POST">
+      <div class="input">
+        <div class="label">
+          <label for="email">E-mail</label>
+        </div>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="input">
+        <div class="label">
+          <label for="password">Password</label>
+        </div>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <div class="but">
+        <button type="submit" id="submit">Submit</button>
+      </div>
+    </form>
+    <p>You do not have an account? - <a href="registration" class="registration">Registrate now</a></p>
+    </div>
+   <script src="js/jquery-3.4.1.min.js"></script>
+   <script text="text/javascript" src="js/login.js"></script>
+  </body>
+</html>
